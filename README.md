@@ -32,7 +32,7 @@ The more tasks you must do at once, the more difficult it gets to keep track of 
     
     * ctype means like C/C++
     * In computers we have a portion called shared memory that can be accesed by multiprocessing so in shared memory we create a new array or value and these array and value are not your Basic python data structures the are something different and defined in multiprocessdin itself
-### SOLUTION 3
+### SOLUTION 2
 * Method 2: SERVER PROCESS
   * Whenever a python starts, a server process is also started. From there on, whenever a new process is needed, the parent       process connnects to the server and requests it to fork a new process. A server process can hold Python objects and           allows other processes to manipulate them using proxies.
   * multiprocessing module provides a Manager class which controls a server process. Hence, managres provide a way tocreate       data which can be shared between different processes. 
