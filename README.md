@@ -23,7 +23,7 @@ The more tasks you must do at once, the more difficult it gets to keep track of 
    * run independently
    * have their own memory space
  In 02_MP.py we have seen the parent list do not have values and is empty so here we will see the solution so how we can reflect the changes in the parent variable too.
-
+    
 #### SOLUTION 1
   * Method 1: SHARED MEMORY
     * multiprocessing module provides Array and Value objects to share data between processes.
@@ -67,3 +67,26 @@ The more tasks you must do at once, the more difficult it gets to keep track of 
     Process synchronization is defined as a mechanism which ensures that two or more concurrent processes 
     do not simuntaneously execute some particular program segment known as critical section.
     Critical section refers to the parts of the program where the shared resource is accessed.
+    
+    
+ 
+## Multithreading
+
+    A thread is an entity within a process that can be scheduled for execution. 
+    Also, it is athe smallest unit of processing that cab be performed in an OS(Operating system).
+    In simple words, a thread is a sequence of such instruction within a program that can be executed
+    independently of other code. For simplicity, youcan assume that a thread is simply a subset of a process.
+
+### Multiple threads can exist within one process where:
+    * Each thread contains its own register set and local variables(stored in stack).
+    * All the threads of a process share global variables (stored in heap) and the program code.
+
+#### Multithreading is defined as a abitlity of a processor to execute multiple threads concurrently.
+
+### Thread synchronization
+    # Prevents the threads to be processed at same time
+      Global variables are going to be a part of critical section so if you have a thread and that is 
+      executing any function and in that section if there is any line which is reffering to a critical
+      section (Global variable here) and if multiple threads are trying to execute the crtical section 
+      at the same time, it will give some unexpected output.
+
